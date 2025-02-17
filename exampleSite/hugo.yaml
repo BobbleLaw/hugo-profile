@@ -2,6 +2,7 @@ baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
 title: "Hugo Profile"
 theme: hugo-profile
+themesDir: "../.."
 
 outputs:
   home:
@@ -14,11 +15,11 @@ outputs:
 
 enableRobotsTXT: true
 
-#services:
-  #googleAnalytics:
-    #id: G-MEASUREMENT_ID
-  #disqus:
-    #shortname: your-disqus-shortname
+# services:
+#   googleAnalytics:
+#     id: G-MEASUREMENT_ID
+#   disqus:
+#     shortname: your-disqus-shortname
 
 pagination:
   pagerSize: 3
@@ -119,8 +120,8 @@ params:
     disableSearch: false
     # searchPlaceholder: "Search"
     stickyNavBar:
-      enable : true
-      showOnScrollUp : true
+      enable: true
+      showOnScrollUp: true
     enableSeparator: false
     menus:
       disableAbout: false
