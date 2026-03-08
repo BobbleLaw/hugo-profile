@@ -16,7 +16,7 @@ Hugo est livré avec plusieurs [Shortcodes Intégrés](https://gohugo.io/content
 
 ## Shortcode Simple X
 ```
-{{</* tweet user="GoHugoIO" id="1315233626070503424" */>}}
+{{</* x user="GoHugoIO" id="1315233626070503424" */>}}
 ```
 <br>
 <!-- Temporarily removed for build -->
@@ -30,17 +30,6 @@ Hugo est livré avec plusieurs [Shortcodes Intégrés](https://gohugo.io/content
 ```
 <br>
 {{< vimeo 146022717 >}}
-<br>
-
----
-
-## Shortcode gist
-
-```
-{{</* gist spf13 7896402 */>}}
-```
-<br>
-{{< gist spf13 7896402 >}}
 <br>
 
 ---
