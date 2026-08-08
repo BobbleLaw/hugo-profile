@@ -1,0 +1,24 @@
+name: Hugo
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.164.0'
+          extended: true
+
+      - name: Build example site
+        run: hugo --source exampleSite --themesDir ../.. --gc --minify --panicOnWarning --printPathWarnings

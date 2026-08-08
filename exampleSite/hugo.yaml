@@ -1,8 +1,18 @@
 baseURL: "https://hugo-profile.netlify.app"
-languageCode: "en-us"
+locale: "en-US"
 title: "Hugo Profile"
 theme: hugo-profile
 themesDir: "../.."
+
+# The built-in X shortcode fetches oEmbed data during the build. Keep strict
+# builds deterministic when the remote service is unavailable.
+ignoreLogs:
+  - shortcode-x-getremote
+
+module:
+  hugoVersion:
+    extended: true
+    min: 0.164.0
 
 # Multilingual configuration
 defaultContentLanguage: "en"
@@ -10,9 +20,10 @@ defaultContentLanguageInSubdir: false
 
 languages:
   en:
-    languageName: "English"
+    label: "English"
+    locale: "en-US"
     weight: 1
-    contentDir: "content"
+    contentDir: "content/en"
     menu:
       main:
         - identifier: blog
@@ -26,7 +37,8 @@ languages:
           url: /gallery
           weight: 2
   es:
-    languageName: "Español"
+    label: "Español"
+    locale: "es-ES"
     weight: 2
     contentDir: "content/es"
     menu:
@@ -233,7 +245,8 @@ languages:
         btnName: Escríbeme
   fr:
     contentDir: "content/fr"
-    languageName: "Français"
+    label: "Français"
+    locale: "fr-FR"
     weight: 3
     menu:
       main:
@@ -449,11 +462,11 @@ outputs:
 
 enableRobotsTXT: true
 
-#services:
-  #googleAnalytics:
-    #id: G-MEASUREMENT_ID
-  #disqus:
-    #shortname: your-disqus-shortname
+# services:
+#   googleAnalytics:
+#     id: G-MEASUREMENT_ID
+#   disqus:
+#     shortname: your-disqus-shortname
 
 pagination:
   pagerSize: 3
@@ -463,7 +476,7 @@ markup:
     renderer:
       unsafe: true
 
-Menus:
+menus:
   main:
     - identifier: gallery
       name: Gallery
